@@ -1,0 +1,10 @@
+Challenges/Custom/LC Micro 1.Challenge.Gbx
+Challenges/Custom/LC Micro 2.Challenge.Gbx
+Challenges/Custom/LC Micro 3.Challenge.Gbx
+Challenges/Custom/LC Micro 4.Challenge.Gbx
+Challenges/Custom/LC Micro 5.Challenge.Gbx
+Challenges/Custom/LC Mini 01.Challenge.Gbx
+Challenges/Custom/LC Mini 02.Challenge.Gbx
+Challenges/Custom/LC Mini 03.Challenge.Gbx
+Challenges/Custom/LC Mini 04.Challenge.Gbx
+Challenges/Custom/LC Mini 05.Challenge.Gbx

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<servername>$0F0Li$0E0me $0D0Cit$0C0y $0C0Co$0D0cks$0E0mit$0F0hs</servername>
+	<maxwin>100</maxwin> <!-- payment for goldtime -->
+	<minwin>25</minwin> <!-- payment for pure finish -->
+	<log>1</log> <!-- set to 1 to enable payment logging, anything else disables it -->
+	<payfirstfinish>1</payfirstfinish> <!-- set to 1 for just finishing payment, anything else disables it -->
+	<ignoredplayers>
+	  <!--add as many logins as you want that won't win -->
+		<!--  <ignoredlogin></ignoredlogin>  -->
+		<!-- <ignoredlogin></ignoredlogin> -->
+	</ignoredplayers>
+</settings>

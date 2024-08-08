@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+
+	<!-- config file for plugin.nouse.message.php -->
+	<!-- all values here are initial values and can be changed via admin command -->
+	<infotext>first</infotext>
+	<infotext>second</infotext>
+	<infotext>third</infotext>
+
+	<msginterval>3</msginterval> <!-- interval in seconds, set to "0" for static text -->
+	<random>1</random> <!-- 1 = random , 0 = order (1..2..3..etc -->
+	<toggle>1</toggle> <!-- 0 = no Hide function (F7), 1 = show/hide with F7 -->
+
+	<mainposition>0 -35</mainposition>
+	<size>20 3</size>
+	<textsize>2</textsize>
+
+	<style>Bgs1InRace</style>
+	<substyle>NavButton</substyle>
+
+</settings>

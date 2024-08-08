@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<!-- config file for plugin.nouse.betting.php -->
+	
+	<!-- set to 1 if you want to enable betting at startup -->
+	<betenabled>1</betenabled>
+	
+	<!-- minimum amount of server coppers to enable betting -->
+	<minservercoppers>500</minservercoppers>
+	
+	<!-- minimum amount of coppers to bet -->
+	<minbet>10</minbet>
+	
+	<!-- maximum bet amount you want to allow -->
+	<maxbet>1000</maxbet>
+	
+	<!-- time limits for bet and accept -->
+	<timelimit_bet>30</timelimit_bet>
+	<timelimit_accept>60</timelimit_accept>
+	
+	<!-- betting buttons amount of coppers -->
+	<bet1>25</bet1> <!-- should be same or higher than minbet -->
+	<bet2>50</bet2>
+	<bet3>100</bet3>
+	<bet4>250</bet4>
+	<bet5>500</bet5>
+	
+	<!-- if "0" bet winner need to be in front of all others participants, if "1" only first position can win the bet -->
+	<winneronly>0</winneronly>
+	
+	<!-- payback coppers to starter if nobody accepted bet -->
+	<paybackstarter>1</paybackstarter>
+	
+	<!-- payback if no winner. set to 1 if you want to payback coppers if nobody won the bet -->
+	<paybacknowin>1</paybacknowin>
+	
+	<!-- factor nadeo tax is multiplied with, for any payment. for each transfer it's 2 coppers + 5% of transfer amount -->
+	<!-- you should not use too small minbet & bet values in case you wanna earn coppers, eg factor 5 and value 20c = payback is 6c only -->
+	<!-- 0 = server pay all transer taxes -->
+	<!-- 1 = server and player pay transfer taxes, each one -->
+	<!-- 2 = player pay all taxes -->
+	<!-- 3 = server earn money -->
+	<betstarterpayback>2</betstarterpayback> <!-- factor if nobody accepted bet -->
+	<betnowinpayback>2</betnowinpayback> <!-- factor if nobody won the bet -->
+	<betwinpayment>2</betwinpayment> <!-- factor for winner payment,  -->
+	
+	<!-- position of betting panel -->
+	<bet_panel>
+		<mainpos>0 30 1</mainpos>
+	</bet_panel>
+	
+	<!-- position of accept panel -->
+	<accept_panel>
+		<mainpos>0 30 1</mainpos>
+	</accept_panel>
+	
+	<!-- position of Winner/NoWinner panel -->
+	<win_panel>
+		<mainpos>35 -40 1</mainpos>
+	</win_panel>
+	
+	<!-- position of state panel -->
+	<state_panel>
+		<mainpos>57 23.4 1</mainpos>
+	</state_panel>
+	
+</settings>

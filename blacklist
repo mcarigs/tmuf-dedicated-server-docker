@@ -1,0 +1,12 @@
+# Remove a plugin from this list to enable it
+plugin.rasp_irc.php
+plugin.alternate_scoretable.php
+plugin.best_checkpoint_times.php
+plugin.finishpayout.php
+plugin.flexitime.php
+plugin.greeting_dude.php
+plugin.lotto.php
+plugin.mania_karma.php
+plugin.nouse.betting.php
+plugin.nouse.message.php
+plugin.records_eyepiece.php

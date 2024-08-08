@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+	<servername>@SERVER_NAME@</servername>
+	<winpercentage>1</winpercentage>
+	<maxwin>50</maxwin>
+	<minwin>5</minwin>
+	<payalways>1000</payalways>
+	<pay50chance>500</pay50chance>
+	<finishminplayers>15</finishminplayers>
+	<onlineminplayers>3</onlineminplayers>
+	<ignoredplayers>
+		<ignoredlogin></ignoredlogin>
+	</ignoredplayers>
+	<ignoredretries>1</ignoredretries>
+</settings>
