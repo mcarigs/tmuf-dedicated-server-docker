@@ -19,51 +19,45 @@ Check the default [`docker-compose.yml`](./docker-compose.yml) and adjust it to 
 Add a new file named `.env` with the following variables:
 
 | **Environment Variable**         | **Description**                                                                                                               | **Default Value**               | **Required** |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------|:------------:|
-| `MASTERADMIN_LOGIN`              | Login name of the player to assume MasterAdmin role for XAseco                                                                |                                 |       ✔      |
-| `SERVER_LOGIN`                   | Server account login from the [Trackmania player page](http://official.trackmania.com/tmf-playerpage/main.php)                |                                 |       ✔      |
-| `SERVER_LOGIN_PASSWORD`          | Server account password from the [Trackmania player page](http://official.trackmania.com/tmf-playerpage/main.php)             |                                 |       ✔      |
-| `MYSQL_HOST`                     | Hostname of the MySQL database                                                                                                |               db                |       ✔      |
-| `MYSQL_LOGIN`                    | Username of the MySQL user                                                                                                    |           trackmania            |       ✔      |
-| `MYSQL_PASSWORD`                 | Password of the MySQL user                                                                                                    |                                 |       ✔      |
-| `MYSQL_DATABASE`                 | Name of the MySQL database                                                                                                    |           trackmania            |       ✔      |
-| `SERVER_PASSWORD`                | Password required for players to join the server. Omit this value to allow anyone to join                                     |                                 |              |
-| `SERVER_SA_PASSWORD`             | Password for SuperAdmin credential                                                                                            |       randomly generated        |              |
-| `SERVER_ADM_PASSWORD`            | Password for Admin credential                                                                                                 |       randomly generated        |              |
-| `SERVER_PORT`                    | Port for server communications                                                                                                |              2350               |              |
-| `SERVER_P2P_PORT`                | Port for peer2peer communication                                                                                              |              3450               |              |
-| `SERVER_NAME`                    | Server name in ingame browser                                                                                                 |     "Trackmania Server"         |              |
-| `SERVER_COMMENT`                 | Server description                                                                                                            |  "This is a Trackmania Server"  |              |
-| `SERVER_PASSWORD`                | If you want to secure your server against unwanted logins, set a server password                                              |                                 |              |
-| `HIDE_SERVER`                    | Whether you want your server public or not                                                                                    |           0 (public)            |              |
-| `MAX_PLAYERS`                    | Max player count                                                                                                              |              32                 |              |
-| `PACKMASK`                       | Leave empty to change server mode to United                                                                                   |        stadium (Nations)        |              |
-| `GAMEMODE`                       | 0 (Rounds), 1 (TimeAttack), 2 (Team), 3 (Laps), 4 (Stunts)                                                                    |              1                  |              |
-| `CHATTIME`                       | Chat time value in milliseconds                                                                                               |            10000                |              |
-| `FINISHTIMEOUT`                  | Finish timeout value in milliseconds (0 = classic, 1 = adaptive)                                                              |              1                  |              |
-| `DISABLERESPAWN`                 | 0 (respawns enabled), 1 (respawns disabled)                                                                                   |              0                  |              |
-| `ROUNDS_POINTSLIMIT`             | Points limit for rounds mode                                                                                                  |              30                 |              |
-| `TIMEATTACK_LIMIT`               | Time limit in milliseconds for time attack mode                                                                               |            80000                |              |
-| `TEAM_POINTSLIMIT`               | Points limit for team mode                                                                                                    |              50                 |              |
-| `TEAM_MAXPOINTS`                 | Number of maximum points per round for team mode                                                                              |              6                  |              |
-| `LAPS_NBLAPS`                    | Number of laps for laps mode                                                                                                  |              5                  |              |
-| `LAPS_TIMELIMIT`                 | Time limit in milliseconds for laps mode                                                                                      |              0                  |              |
-| `CUP_POINTSLIMIT`                | Points limit for cup mode                                                                                                     |             10                  |              |
-| `CUP_ROUNDSPERCHALLENGE`         | Rounds per challenge                                                                                                          |              5                  |              |
-| `CUP_NBWINNERS`                  | Number of Winners                                                                                                             |              3                  |              |
-| `CUP_WARMUPDURATION`             | Warmup duration                                                                                                               |              2                  |              |
+|----------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------|:------------:|
+| `MASTERADMIN_LOGIN`              | Login name of the player to assume MasterAdmin role for XAseco                                                         |                                 |       ✔      |
+| `SERVER_LOGIN`                   | Server account login from the [Trackmania player page](http://official.trackmania.com/tmf-playerpage/main.php)         |                                 |       ✔      |
+| `SERVER_LOGIN_PASSWORD`          | Server account password from the [Trackmania player page](http://official.trackmania.com/tmf-playerpage/main.php)      |                                 |       ✔      |
+| `MYSQL_HOST`                     | Hostname of the MySQL database                                                                                         |               db                |       ✔      |
+| `MYSQL_LOGIN`                    | Username of the MySQL user                                                                                             |           trackmania            |       ✔      |
+| `MYSQL_PASSWORD`                 | Password of the MySQL user                                                                                             |                                 |       ✔      |
+| `MYSQL_DATABASE`                 | Name of the MySQL database                                                                                             |           trackmania            |       ✔      |
+| `SERVER_PASSWORD`                | Password required for players to join the server. Omit this value to allow anyone to join                              |                                 |              |
+| `SERVER_SA_PASSWORD`             | Password for SuperAdmin credential                                                                                     |       randomly generated        |              |
+| `SERVER_ADM_PASSWORD`            | Password for Admin credential                                                                                          |       randomly generated        |              |
+| `SERVER_PORT`                    | Port for server communications                                                                                         |              2350               |              |
+| `SERVER_P2P_PORT`                | Port for peer2peer communication                                                                                       |              3450               |              |
+| `SERVER_NAME`                    | Server name in ingame browser                                                                                          |     "Trackmania Server"         |              |
+| `SERVER_COMMENT`                 | Server description                                                                                                     |  "This is a Trackmania Server"  |              |
+| `SERVER_PASSWORD`                | If you want to secure your server against unwanted logins, set a server password                                       |                                 |              |
+| `HIDE_SERVER`                    | Whether you want your server public or not                                                                             |           0 (public)            |              |
+| `MAX_PLAYERS`                    | Max player count                                                                                                       |              32                 |              |
+| `PACKMASK`                       | Leave empty to change server mode to United                                                                            |        stadium (Nations)        |              |
+| `GAMEMODE`                       | 0 (Rounds), 1 (TimeAttack), 2 (Team), 3 (Laps), 4 (Stunts)                                                             |              1                  |              |
+| `CHATTIME`                       | Chat time value in milliseconds                                                                                        |            10000                |              |
+| `FINISHTIMEOUT`                  | Finish timeout value in milliseconds (0 = classic, 1 = adaptive)                                                       |              1                  |              |
+| `DISABLERESPAWN`                 | 0 (respawns enabled), 1 (respawns disabled)                                                                            |              0                  |              |
+| `ROUNDS_POINTSLIMIT`             | Points limit for rounds mode                                                                                           |              30                 |              |
+| `TIMEATTACK_LIMIT`               | Time limit in milliseconds for time attack mode                                                                        |            80000                |              |
+| `TEAM_POINTSLIMIT`               | Points limit for team mode                                                                                             |              50                 |              |
+| `TEAM_MAXPOINTS`                 | Number of maximum points per round for team mode                                                                       |              6                  |              |
+| `LAPS_NBLAPS`                    | Number of laps for laps mode                                                                                           |              5                  |              |
+| `LAPS_TIMELIMIT`                 | Time limit in milliseconds for laps mode                                                                               |              0                  |              |
+| `CUP_POINTSLIMIT`                | Points limit for cup mode                                                                                              |             10                  |              |
+| `CUP_ROUNDSPERCHALLENGE`         | Rounds per challenge                                                                                                   |              5                  |              |
+| `CUP_NBWINNERS`                  | Number of Winners                                                                                                      |              3                  |              |
+| `CUP_WARMUPDURATION`             | Warmup duration                                                                                                        |              2                  |              |
+| `CUSTOM_MUSIC_ENABLED`           | Whether or not you want to enable custom music in your server                                                          |                                 |              |
+| `MUSIC_SERVER`                   | Web server URI or file path relative to '/var/lib/tmserver/GameData' containing your custom music                      |                                 |              |
+| `AUTO_NEXT_SONG`                 | Whether or not to automatically load the next song when the next track is loaded                                       |                                 |              |
+| `AUTO_SHUFFLE`                   | Whether or not to automatically shuffle songs on server start-up & reload                                              |                                 |              |
+| `ALLOW_JUKEBOX`                  | Whether or not to allow players to add songs to the queue                                                              |                                 |              |
 ```
-
-#### Custom Music
-
-```
-CUSTOM_MUSIC_ENABLED        | Whether or not you want to enable custom music in your server
-MUSIC_SERVER                | Web server URI or file path relative to '/var/lib/tmserver/GameData' containing your custom music
-AUTO_NEXT_SONG              | Whether or not to automatically load the next song when the next track is loaded
-AUTO_SHUFFLE                | Whether or not to automatically shuffle songs on server start-up & reload
-ALLOW_JUKEBOX               | Whether or not to allow players to add songs to the queue
-```
-  - If using a web server, it must allow direct downloads
 
 # Customization
 
