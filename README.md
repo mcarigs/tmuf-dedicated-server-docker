@@ -57,7 +57,6 @@ Add a new file named `.env` with the following variables:
 | `AUTO_NEXT_SONG`                 | Whether or not to automatically load the next song when the next track is loaded                                       |                                 |              |
 | `AUTO_SHUFFLE`                   | Whether or not to automatically shuffle songs on server start-up & reload                                              |                                 |              |
 | `ALLOW_JUKEBOX`                  | Whether or not to allow players to add songs to the queue                                                              |                                 |              |
-```
 
 # Customization
 
