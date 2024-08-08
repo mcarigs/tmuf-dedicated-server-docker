@@ -95,8 +95,8 @@ Creating your own playlist is as easy as adding tracks to the `tracks` folder an
 
 Contents of `playlist.txt` after running `./update_tracks.sh`:
 ```
-Custom/mini01.Challenge.Gbx
-Custom/SpeedxZxZ.Challenge.Gbx
+Challenges/Custom/mini01.Challenge.Gbx
+Challenges/Custom/SpeedxZxZ.Challenge.Gbx
 ```
 ### Custom Music
 
