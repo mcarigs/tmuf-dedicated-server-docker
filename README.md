@@ -1,6 +1,6 @@
 # Trackmania United Forever Dedicated Server
 
-This repository provides the tools and Docker image needed to set up a customizable Trackmania Nations/United Forever server bundled with XAseco in a Docker container. The provided Docker image simplifies server deployment and management, while allowing extensive configuration and customization options for both the Trackmania server and the XAseco plugin manager.
+This repository provides the tools and Docker image needed to set up a customizable Trackmania United Forever server bundled with XAseco in a Docker container. The provided Docker image simplifies server deployment and management, while allowing extensive configuration and customization options for both the Trackmania server and the XAseco plugin manager.
 
 # How to use this image
 
@@ -18,76 +18,40 @@ Check the default [`docker-compose.yml`](./docker-compose.yml) and adjust it to 
 
 Add a new file named `.env` with the following variables:
 
-### Mandatory
-
-```
-SERVER_LOGIN                | Server account login
-SERVER_LOGIN_PASSWORD       | Server account password
-MASTERADMIN_LOGIN           | Login name of the player to assume MasterAdmin role for XAseco
-MYSQL_HOST                  | Host of MySQL database -> Default : db
-MYSQL_LOGIN                 | Username of MySQL database -> Default : trackmania
-MYSQL_PASSWORD (Mandatory)  | Password of MySQL user
-MYSQL_DATABASE              | Name of MySQL database -> Default : trackmania
-```
-
-### Optional
-
-```
-SERVER_PASSWORD             | Password required for players to join the server. Omit this value to allow anyone to join
-SERVER_SA_PASSWORD          | Password for SuperAdmin credential -> when left empty will be randomly generated
-SERVER_ADM_PASSWORD         | Password for Admin credential -> when left empty will be randomly generated
-SERVER_PORT                 | Port for server communications -> Default : 2350
-SERVER_P2P_PORT             | Port for peer2peer communication -> Default : 3450
-SERVER_NAME                 | Server name in ingame browser -> Default : "Trackmania Server"
-SERVER_COMMENT              | Server description -> Default : "This is a Trackmania Server"
-SERVER_PASSWORD             | If you want to secure your server against unwanted logins, set a server password
-HIDE_SERVER                 | Whether you want your server public or not -> Default : 0 (public)
-MAX_PLAYERS                 | Max player count -> Default : 32
-PACKMASK                    | Leave empty to change server mode to United -> Default : stadium (Nations)
-```
-
-### Gamemodes
-
-```
-GAMEMODE                    | 0 (Rounds), 1 (TimeAttack), 2 (Team), 3 (Laps), 4 (Stunts) -> Default : 1
-CHATTIME                    | Chat time value in milliseconds -> Default : 10000
-FINISHTIMEOUT               | Finish timeout value in milliseconds (0 = classic, 1 = adaptive -> Default : 1)
-DISABLERESPAWN              | 0 (respawns enabled), 1 (respawns disabled) -> Default : 0
-```
-
-#### Gamemode : Rounds
-
-```
-ROUNDS_POINTSLIMIT          | Points limit for rounds mode -> Default : 30
-```
-
-#### Gamemode : TimeAttack
-
-```
-TIMEATTACK_LIMIT            | Time limit in milliseconds for time attack mode -> Default : 180000
-```
-
-#### Gamemode : Team
-
-```
-TEAM_POINTSLIMIT            | Points limit for team mode -> Default : 50
-TEAM_MAXPOINTS              | Number of maximum points per round for team mode -> Default : 6
-```
-
-#### Gamemode : Laps
-
-```
-LAPS_NBLAPS                 | Number of laps for laps mode -> Default : 5
-LAPS_TIMELIMIT              | Time limit in milliseconds for laps mode -> Default : 0
-```
-
-#### Gamemode : Cup
-
-```
-CUP_POINTSLIMIT             | Points limit for cup mode -> Default : 100
-CUP_ROUNDSPERCHALLENGE      | Rounds per challenge -> Default : 5
-CUP_NBWINNERS               | Number of Winners -> Default : 3
-CUP_WARMUPDURATION          | Warmup duration -> Default : 2
+| **Environment Variable**         | **Description**                                                                                                               | **Default Value**               | **Required** |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------------------|:------------:|
+| `MASTERADMIN_LOGIN`              | Login name of the player to assume MasterAdmin role for XAseco                                                                |                                 |       ✔      |
+| `SERVER_LOGIN`                   | Server account login from the [Trackmania player page](http://official.trackmania.com/tmf-playerpage/main.php)                |                                 |       ✔      |
+| `SERVER_LOGIN_PASSWORD`          | Server account password from the [Trackmania player page](http://official.trackmania.com/tmf-playerpage/main.php)             |                                 |       ✔      |
+| `MYSQL_HOST`                     | Hostname of the MySQL database                                                                                                |               db                |       ✔      |
+| `MYSQL_LOGIN`                    | Username of the MySQL user                                                                                                    |           trackmania            |       ✔      |
+| `MYSQL_PASSWORD`                 | Password of the MySQL user                                                                                                    |                                 |       ✔      |
+| `MYSQL_DATABASE`                 | Name of the MySQL database                                                                                                    |           trackmania            |       ✔      |
+| `SERVER_PASSWORD`                | Password required for players to join the server. Omit this value to allow anyone to join                                     |                                 |              |
+| `SERVER_SA_PASSWORD`             | Password for SuperAdmin credential                                                                                            |       randomly generated        |              |
+| `SERVER_ADM_PASSWORD`            | Password for Admin credential                                                                                                 |       randomly generated        |              |
+| `SERVER_PORT`                    | Port for server communications                                                                                                |              2350               |              |
+| `SERVER_P2P_PORT`                | Port for peer2peer communication                                                                                              |              3450               |              |
+| `SERVER_NAME`                    | Server name in ingame browser                                                                                                 |     "Trackmania Server"         |              |
+| `SERVER_COMMENT`                 | Server description                                                                                                            |  "This is a Trackmania Server"  |              |
+| `SERVER_PASSWORD`                | If you want to secure your server against unwanted logins, set a server password                                              |                                 |              |
+| `HIDE_SERVER`                    | Whether you want your server public or not                                                                                    |           0 (public)            |              |
+| `MAX_PLAYERS`                    | Max player count                                                                                                              |              32                 |              |
+| `PACKMASK`                       | Leave empty to change server mode to United                                                                                   |        stadium (Nations)        |              |
+| `GAMEMODE`                       | 0 (Rounds), 1 (TimeAttack), 2 (Team), 3 (Laps), 4 (Stunts)                                                                    |              1                  |              |
+| `CHATTIME`                       | Chat time value in milliseconds                                                                                               |            10000                |              |
+| `FINISHTIMEOUT`                  | Finish timeout value in milliseconds (0 = classic, 1 = adaptive)                                                              |              1                  |              |
+| `DISABLERESPAWN`                 | 0 (respawns enabled), 1 (respawns disabled)                                                                                   |              0                  |              |
+| `ROUNDS_POINTSLIMIT`             | Points limit for rounds mode                                                                                                  |              30                 |              |
+| `TIMEATTACK_LIMIT`               | Time limit in milliseconds for time attack mode                                                                               |            80000                |              |
+| `TEAM_POINTSLIMIT`               | Points limit for team mode                                                                                                    |              50                 |              |
+| `TEAM_MAXPOINTS`                 | Number of maximum points per round for team mode                                                                              |              6                  |              |
+| `LAPS_NBLAPS`                    | Number of laps for laps mode                                                                                                  |              5                  |              |
+| `LAPS_TIMELIMIT`                 | Time limit in milliseconds for laps mode                                                                                      |              0                  |              |
+| `CUP_POINTSLIMIT`                | Points limit for cup mode                                                                                                     |             10                  |              |
+| `CUP_ROUNDSPERCHALLENGE`         | Rounds per challenge                                                                                                          |              5                  |              |
+| `CUP_NBWINNERS`                  | Number of Winners                                                                                                             |              3                  |              |
+| `CUP_WARMUPDURATION`             | Warmup duration                                                                                                               |              2                  |              |
 ```
 
 #### Custom Music
